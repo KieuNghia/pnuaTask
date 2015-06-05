@@ -10,9 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by nghia on 04.06.2015.
  */
-public class FridgePage  extends AbstractPage{
+public class ProductPage extends AbstractPage{
 
-    public FridgePage(WebDriver driver){
+    public ProductPage(WebDriver driver){
 
         super(driver, Constants.URL);
         PageFactory.initElements(driver, this);
@@ -24,20 +24,20 @@ public class FridgePage  extends AbstractPage{
     @FindBy(xpath = "//a[text() = 'попул€рность']")
     public WebElement popularitySort;
 
-    @FindBy(xpath = "//div[@class = 'catalog']//div[@class = 'price'][1]")
-    public w
+    @FindBy(xpath = "//div[@class = 'catalog']//div[@class = 'item'][1]/div[@class = 'price']")
+    public WebElement priceOfFfirstElement;
 
-    public FridgePage sortByPrice(){
+    public ProductPage sortByPrice(){
 
         priceSort.click();
-        return new FridgePage(driver);
+        return new ProductPage(driver);
 
     }
 
-    public FridgePage sortByPopularity(){
+    public ProductPage sortByPopularity(){
         popularitySort.click();
 
-        return new FridgePage(driver);
+        return new ProductPage(driver);
 
     }
 

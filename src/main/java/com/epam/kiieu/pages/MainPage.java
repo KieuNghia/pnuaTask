@@ -34,11 +34,11 @@ public class MainPage  extends AbstractPage{
 
 
 
-    public FridgePage moveToFridgePage(){
+    public ProductPage moveToFridgePage(){
 
         fridgeCategory.click();
 
-        return new FridgePage(driver);
+        return new ProductPage(driver);
 
     }
 
