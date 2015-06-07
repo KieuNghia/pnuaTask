@@ -1,7 +1,7 @@
 package com.epam.kiieu.pages;
 
-import com.epam.kiieu.utils.AbstractPage;
-import com.epam.kiieu.utils.Constants;
+import com.epam.kiieu.utils.pages.AbstractPage;
+import com.epam.kiieu.utils.pages.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,22 +19,21 @@ public class MainPage  extends AbstractPage{
     }
 
 
-    @FindBy(linkText = "Холодильники")
+    @FindBy(xpath = "//a[@href='http://pn.com.ua/ct/2163/']")
     public WebElement fridgeCategory;
 
-    @FindBy(linkText = "Микроволновки")
+    @FindBy(xpath = "//a[@href='http://pn.com.ua/ct/2137/']")
     public WebElement microwaveOven;
 
-    @FindBy (linkText = "Стиральные машины")
+    @FindBy (xpath = "//a[@href='http://pn.com.ua/ct/2161/'] ")
     public WebElement washMachine;
 
-
-    @FindBy (linkText = "Хлебопечи")
+    @FindBy (xpath = "//a[@href='http://pn.com.ua/ct/2138/']")
     public WebElement breadMaker;
 
 
 
-    public FridgePage moveToFridgePage(){
+    public FridgePage goToFridgePage(){
 
         fridgeCategory.click();
 
@@ -42,18 +41,27 @@ public class MainPage  extends AbstractPage{
 
     }
 
-    public MicrowaveOvenPage moveToMicrowaveOvenPage(){
+    public MicroovenPage goToMicrowaveOvenPage(){
 
         microwaveOven.click();
 
-        return new MicrowaveOvenPage(driver);
+        return new MicroovenPage(driver);
     }
 
-    public WashMachinePage movetToWashMachinePage(){
+    public WashingMachinePage gotToWashMachinePage(){
 
         washMachine.click();
-        return new WashMachinePage(driver);
+        return new WashingMachinePage(driver);
     }
+
+    public BreadMakerPage goToBreadMakerPage (){
+
+        breadMaker.click();
+        return new BreadMakerPage(driver);
+
+    }
+
+
 }
 
 
