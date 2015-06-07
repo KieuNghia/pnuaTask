@@ -75,12 +75,10 @@ public class ComparisonPage extends AbstractPage {
         return secondItemPower.getText();
     }
 
-    public void verifyColorOfDifferenceElements(){
-        List<WebElement> differenceList = driver.findElements(By.xpath(Constants.PRODUCT_NAME));
 
 
     }
 
 
 
-}
+

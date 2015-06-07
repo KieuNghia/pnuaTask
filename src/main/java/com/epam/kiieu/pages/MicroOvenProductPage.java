@@ -35,28 +35,24 @@ public class MicroOvenProductPage extends AbstractPage {
     public  String getItemType() {
 
         String itemTypeString = itemType.getText();
-
         return itemTypeString;
     }
 
     public String getItemVolume() {
 
         String itemVolumeString = itemVolume.getText();
-
         return itemVolumeString;
     }
 
     public String getItemInnerCoating() {
 
         String itemCoatingString = itemInnerCoating.getText();
-
         return itemCoatingString;
     }
 
     public String getItemPower() {
 
         String itemPowerString = itemPower.getText();
-
         return itemPowerString;
     }
 
