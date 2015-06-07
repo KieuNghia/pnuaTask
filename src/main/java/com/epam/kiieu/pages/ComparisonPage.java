@@ -8,12 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by nghia on 07.06.2015.
- */
+
 public class ComparisonPage extends AbstractPage {
 
     public ComparisonPage(WebDriver driver){
@@ -22,10 +19,10 @@ public class ComparisonPage extends AbstractPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//tr[7]/td[2]")
+    @FindBy(xpath = "//tr[@class = ''][1]/td[2]")
     public WebElement firstItemType;
 
-    @FindBy(xpath = "//tr[7]/td[3]")
+    @FindBy(xpath = "//tr[@class = ''][1]/td[3]")
     public WebElement secondItemType;
 
     @FindBy(xpath = "//tr[8]/td[2]")
@@ -78,6 +75,11 @@ public class ComparisonPage extends AbstractPage {
         return secondItemPower.getText();
     }
 
+    public void verifyColorOfDifferenceElements(){
+        List<WebElement> differenceList = driver.findElements(By.xpath(Constants.PRODUCT_NAME));
+
+
+    }
 
 
 

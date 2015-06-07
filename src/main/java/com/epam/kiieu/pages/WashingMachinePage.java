@@ -12,9 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 
-/**
- * Created by nghia on 06.06.2015.
- */
+
 public class WashingMachinePage extends AbstractPage {
 
 
@@ -41,7 +39,7 @@ public class WashingMachinePage extends AbstractPage {
     }
 
 
-    public ArrayList getPriceList() {
+    public ArrayList<Integer> getPriceList() {
 
         List<WebElement> priceListWebElements = driver.findElements(By.xpath(Constants.PRODUCT_PRICE));
         ArrayList<Integer> prices = new ArrayList<Integer>();

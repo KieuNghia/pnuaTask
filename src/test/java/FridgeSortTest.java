@@ -3,9 +3,6 @@ import com.epam.kiieu.utils.tests.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-/**
- * Created by nghia on 07.06.2015.
- */
 public class FridgeSortTest extends BaseTest {
 
 

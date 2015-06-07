@@ -4,9 +4,7 @@ import com.epam.kiieu.utils.tests.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-/**
- * Created by nghia on 07.06.2015.
- */
+
 public class MicroOvenComparisonTest extends BaseTest{
 
     @Test(description = "test check 2 item description")

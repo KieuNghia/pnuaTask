@@ -11,9 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by nghia on 06.06.2015.
- */
+
 public class BreadMakerPage extends AbstractPage {
 
     public BreadMakerPage(WebDriver driver) {

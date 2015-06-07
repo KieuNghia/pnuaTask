@@ -12,9 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by nghia on 06.06.2015.
- */
+
 public class FridgePage extends AbstractPage {
 
 

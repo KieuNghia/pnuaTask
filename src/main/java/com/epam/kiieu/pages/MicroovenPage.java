@@ -7,9 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by nghia on 06.06.2015.
- */
+
 public class MicroovenPage extends AbstractPage {
 
 
