@@ -1,3 +1,5 @@
+package com.epam.kieu.task.pnua;
+
 import com.epam.kiieu.pages.MicroOvenProductPage;
 import com.epam.kiieu.utils.tests.BaseTest;
 

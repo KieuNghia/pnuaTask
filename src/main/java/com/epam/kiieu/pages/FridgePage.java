@@ -16,7 +16,7 @@ import java.util.List;
 public class FridgePage extends AbstractPage {
 
 
-    public FridgePage(WebDriver driver){
+    public FridgePage(WebDriver driver) {
 
         super(driver, Constants.URL);
         PageFactory.initElements(driver, this);
@@ -28,54 +28,54 @@ public class FridgePage extends AbstractPage {
     @FindBy(xpath = "//a[text() = 'название']")
     public WebElement popularitySort;
 
+    @FindBy(xpath = "//div[@class='name']/a")
+    public List<WebElement> namesList;
+
+    @FindBy(xpath = "//div[@class='price']/strong")
+    public List<WebElement> pricesList;
 
 
-    public FridgePage sortByPrice(){
+    public FridgePage sortByPrice() {
 
         priceSort.click();
         return new FridgePage(driver);
 
     }
 
-    public FridgePage sortByName(){
+    public FridgePage sortByName() {
         popularitySort.click();
 
         return new FridgePage(driver);
 
     }
 
-    public List getListofNames(){
+    public List getListofNames() {
         ArrayList<String> names = new ArrayList<String>();
-        List<WebElement> namesList = driver.findElements(By.xpath(Constants.PRODUCT_NAME));
 
-        for (WebElement webElement : namesList){
+        for (WebElement webElement : namesList) {
             names.add(webElement.getText());
         }
         return names;
     }
 
-    public ArrayList getListofPrices(){
+    public ArrayList getListofPrices() {
         ArrayList<String> prices = new ArrayList<String>();
-        List<WebElement> pricesList = driver.findElements(By.xpath(Constants.PRODUCT_PRICE));
 
-        for(WebElement webElement: pricesList){
+        for (WebElement webElement : pricesList) {
             prices.add(webElement.getText());
         }
         return prices;
     }
 
-    public boolean verifyItemsAreSortedBy(List currentList){
+    public boolean verifyItemsAreSortedBy(List currentList) {
 
         List<String> sortedList = new ArrayList<String>(currentList);
         Collections.sort(sortedList);
-        if(sortedList.equals(currentList)){
+        if (sortedList.equals(currentList)) {
             return true;
-        }
-
-        else return false;
+        } else return false;
 
     }
-
 
 
 }

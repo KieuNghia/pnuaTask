@@ -21,6 +21,11 @@ public class BaseTest {
     protected static MicroovenPage microovenPage;
     protected static MicroOvenProductPage microOvenProductPage;
     protected static WashingMachinePage washingMachinePage;
+    protected static AirConditionPage airConditionPage;
+    protected static AirConditionProductPage airConditionProductPage;
+    protected static AirConditionPriceCatalog airConditionPriceCatalog;
+
+
 
 
     private WebDriver webDriver;

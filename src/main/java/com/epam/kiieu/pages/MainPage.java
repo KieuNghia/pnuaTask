@@ -28,6 +28,15 @@ public class MainPage  extends AbstractPage{
 
     @FindBy (xpath = "//a[@href='http://pn.com.ua/ct/2138/']")
     public WebElement breadMaker;
+    @FindBy (xpath = "//a[@href='http://pn.com.ua/ct/2191/']")
+    public WebElement condition;
+
+    public AirConditionPage goToAirConditionPage(){
+
+        condition.click();
+
+        return new AirConditionPage(driver);
+    }
 
 
 

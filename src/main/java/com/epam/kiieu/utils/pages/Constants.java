@@ -13,6 +13,7 @@ public final class Constants {
     public static final String MIN_PRICE = "3000";
     public static final String BREAD_MAKER_MANUFACTURER = "Delfa";
     public static final String NOT_PRESENTED_MANUFACTURER = "Aurora";
+    public static final String CONDITION_MAKER = "BEKO";
 
 
 

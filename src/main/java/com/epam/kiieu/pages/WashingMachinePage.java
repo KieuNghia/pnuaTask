@@ -28,6 +28,9 @@ public class WashingMachinePage extends AbstractPage {
     @FindBy(xpath = "//div[@class = 'group'][2]//a[text() = '" + Constants.MAX_PRICE + "']")
     public WebElement maxPrice;
 
+    @FindBy(xpath = "//div[@class='price']/strong")
+    public List<WebElement> priceListWebElements;
+
     public WashingMachinePage setMinPrice() {
         minPrice.click();
         return new WashingMachinePage(driver);
@@ -41,7 +44,6 @@ public class WashingMachinePage extends AbstractPage {
 
     public ArrayList<Integer> getPriceList() {
 
-        List<WebElement> priceListWebElements = driver.findElements(By.xpath(Constants.PRODUCT_PRICE));
         ArrayList<Integer> prices = new ArrayList<Integer>();
 
         for (WebElement webElement : priceListWebElements) {

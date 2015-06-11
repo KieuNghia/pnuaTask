@@ -27,6 +27,12 @@ public class BreadMakerPage extends AbstractPage {
     @FindBy(xpath = "//div[@class = 'group'][8]//a[2]")
     public WebElement weightAdjuster;
 
+    @FindBy(xpath = "//div[@class = 'catalog']//div[@class = 'name']")
+    public List<WebElement> manufactureListWebElements;
+
+    @FindBy(xpath = "//div[@class = 'description']" )
+    public List<WebElement> descriptionWebElements;
+
     public BreadMakerPage selectManufacturer() {
         manufacturer.click();
         return new BreadMakerPage(driver);
@@ -40,7 +46,6 @@ public class BreadMakerPage extends AbstractPage {
 
     public ArrayList getManufactureList() {
 
-        List<WebElement> manufactureListWebElements = driver.findElements(By.xpath("//div[@class = 'catalog']//div[@class = 'name']"));
         ArrayList<String> manufactures = new ArrayList<String>();
 
         for (WebElement webElement : manufactureListWebElements) {
@@ -75,7 +80,6 @@ public class BreadMakerPage extends AbstractPage {
 
     public ArrayList<String> getDescriptions() {
 
-        List<WebElement> descriptionWebElements = driver.findElements(By.xpath("//div[@class = 'description']"));
         ArrayList<String> descriptions = new ArrayList<String>();
 
         for (WebElement webElement : descriptionWebElements) {

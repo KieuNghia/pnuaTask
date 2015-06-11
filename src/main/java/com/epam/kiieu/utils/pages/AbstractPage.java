@@ -3,7 +3,7 @@ package com.epam.kiieu.utils.pages;
 import org.openqa.selenium.WebDriver;
 
 
-public abstract class AbstractPage extends PageObjectSupport {
+public abstract class AbstractPage {
 
     protected final WebDriver driver;
 
