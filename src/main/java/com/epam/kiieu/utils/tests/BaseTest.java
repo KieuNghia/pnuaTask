@@ -21,10 +21,6 @@ public class BaseTest {
     protected static MicroovenPage microovenPage;
     protected static MicroOvenProductPage microOvenProductPage;
     protected static WashingMachinePage washingMachinePage;
-    protected static AirConditionPage airConditionPage;
-    protected static AirConditionProductPage airConditionProductPage;
-    protected static AirConditionPriceCatalog airConditionPriceCatalog;
-
 
 
 
@@ -34,7 +30,7 @@ public class BaseTest {
     protected void setUp() {
         try {
             WebDriverFactory driverFactory = new WebDriverFactory();
-            webDriver = driverFactory.DriverBuilder("firefox");
+            webDriver = driverFactory.DriverBuilder("chrome");
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
